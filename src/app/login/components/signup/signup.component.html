@@ -1,0 +1,30 @@
+<div>
+
+
+  <mat-card>
+    <mat-card-header>
+        <h1>SignUp</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Enter your email" formControlName="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password" type="password" [formControl]="password" required>
+            <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Confirm password" type="password" [formControl]="confirmPassword" required>
+            <mat-error *ngIf="confirmPassword.invalid">{{getConfirmPasswordErrorMessage()}}</mat-error>
+          </mat-form-field>
+
+          </div>
+          <button mat-raised-button color="primary" [disabled]="!loginForm.valid">SignUp</button>
+        </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>

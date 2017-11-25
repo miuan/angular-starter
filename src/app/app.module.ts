@@ -16,7 +16,13 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule
+} from '@angular/material';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -30,6 +36,7 @@ import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
+import { LoginModule } from './login';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -64,8 +71,14 @@ type StoreType = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
     FormsModule,
     HttpModule,
+    LoginModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules

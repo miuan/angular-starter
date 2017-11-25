@@ -20,6 +20,15 @@ import { AppState } from './app.service';
   ],
   template: `
     <nav>
+      <a [routerLink]=" ['./login'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Login
+      </a>
+      <a [routerLink]=" ['./signup'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Signup
+      </a>
+
       <a [routerLink]=" ['./'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Index

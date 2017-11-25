@@ -1,0 +1,22 @@
+<!-- 
+    start loading
+-->
+<div *ngIf="data.loading" class="ops-loader">
+    <div class="ops-loader-left">
+     <div class="ops-loader-loader"></div> 
+    </div> 
+    <div>Loading...</div>
+</div>
+
+<!-- 
+    we WANT to show nocontent page 
+    loading finish and no data 
+-->
+<div *ngIf="nocontent && !data.loading && !data.data ">
+    <div class="alert alert-info" role="alert">Data nenalezena</div>
+</div>
+<!-- 
+    loading finish
+    data loaded or we don't show nocontent page
+-->
+<ng-content *ngIf="!data.loading && data.data"></ng-content>
