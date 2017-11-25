@@ -1,0 +1,8 @@
+title: Angular 2 Starter
+description: An Angular 2 Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E), Karma, Protractor, Jasmine, TypeScript, and Webpack by @AngularClass
+google_analytics: UA-71073175-3
+show_downloads: true
+theme: jekyll-theme-minimal
+
+gems:
+  - jekyll-mentions
